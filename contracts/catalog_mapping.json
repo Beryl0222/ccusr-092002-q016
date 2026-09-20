@@ -1,0 +1,16 @@
+{
+  "service": "medical-service-catalog",
+  "source_context": "http://health.people.com.cn/n1/2026/0916/c14739-40799805.html",
+  "sample": {
+    "national_item": {
+      "code": "N-REHAB-001",
+      "category": "康复",
+      "version": "2026.1"
+    },
+    "province_item": {
+      "province": "闽",
+      "code": "FJ-4402"
+    },
+    "mapping_type": "conditional"
+  }
+}
