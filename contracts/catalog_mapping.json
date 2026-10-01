@@ -12,5 +12,317 @@
       "code": "FJ-4402"
     },
     "mapping_type": "conditional"
-  }
+  },
+  "catalog_versions": [
+    {
+      "version": "2026.1",
+      "published_at": "2026-09-01",
+      "national_items": [
+        {
+          "code": "N-REHAB-001",
+          "name": "偏瘫肢体综合训练",
+          "category": "康复",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "code": "N-SURG-002",
+          "name": "腹腔镜下胆囊切除术(含麻醉配合)",
+          "category": "外科",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "code": "N-LAB-003",
+          "name": "临床基因扩增检验",
+          "category": "检验",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "code": "N-NURS-004",
+          "name": "二级护理",
+          "category": "护理",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "code": "N-NURS-005",
+          "name": "三级护理",
+          "category": "护理",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "code": "N-OLD-005",
+          "name": "旧版物理治疗",
+          "category": "康复",
+          "valid_from": "2025-01-01",
+          "valid_until": "2026-06-30",
+          "status": "revoked"
+        }
+      ],
+      "province_mappings": [
+        {
+          "id": "PM-001",
+          "national_code": "N-REHAB-001",
+          "province": "闽",
+          "mapping_type": "direct",
+          "province_codes": ["FJ-4402"],
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-002",
+          "national_code": "N-SURG-002",
+          "province": "闽",
+          "mapping_type": "one_to_many",
+          "province_codes": ["FJ-5101A", "FJ-5101B", "FJ-5101C"],
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-003",
+          "national_code": "N-LAB-003",
+          "province": "闽",
+          "mapping_type": "conditional",
+          "province_codes": ["FJ-7701", "FJ-7702"],
+          "branches": [
+            { "when": { "encounter_type": "inpatient" }, "codes": ["FJ-7701", "FJ-7702"] },
+            { "when": { "encounter_type": "outpatient" }, "codes": ["FJ-7701"] }
+          ],
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-004",
+          "national_code": "N-NURS-004",
+          "province": "闽",
+          "mapping_type": "direct",
+          "province_codes": ["FJ-6204"],
+          "mutex_group": "nursing-level",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-005",
+          "national_code": "N-NURS-005",
+          "province": "闽",
+          "mapping_type": "direct",
+          "province_codes": ["FJ-6205"],
+          "mutex_group": "nursing-level",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-006",
+          "national_code": "N-OLD-005",
+          "province": "闽",
+          "mapping_type": "direct",
+          "province_codes": ["FJ-9001"],
+          "valid_from": "2025-01-01",
+          "valid_until": "2026-06-30",
+          "status": "revoked"
+        },
+        {
+          "id": "PM-101",
+          "national_code": "N-REHAB-001",
+          "province": "浙",
+          "mapping_type": "direct",
+          "province_codes": ["ZJ-3301"],
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-103",
+          "national_code": "N-LAB-003",
+          "province": "浙",
+          "mapping_type": "conditional",
+          "province_codes": ["ZJ-8801"],
+          "branches": [
+            { "when": { "encounter_type": "inpatient" }, "codes": ["ZJ-8801", "ZJ-8802"] },
+            { "when": { "encounter_type": "outpatient" }, "codes": ["ZJ-8801"] }
+          ],
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "version": "2026.2",
+      "published_at": "2026-10-01",
+      "national_items": [
+        {
+          "code": "N-REHAB-001",
+          "name": "偏瘫肢体综合训练",
+          "category": "康复",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "code": "N-SURG-002",
+          "name": "腹腔镜下胆囊切除术(含麻醉配合)",
+          "category": "外科",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "code": "N-LAB-003",
+          "name": "临床基因扩增检验",
+          "category": "检验",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "code": "N-NURS-004",
+          "name": "二级护理",
+          "category": "护理",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "code": "N-NURS-005",
+          "name": "三级护理",
+          "category": "护理",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "code": "N-OLD-005",
+          "name": "旧版物理治疗",
+          "category": "康复",
+          "valid_from": "2025-01-01",
+          "valid_until": "2026-06-30",
+          "status": "revoked"
+        },
+        {
+          "code": "N-TRAD-006",
+          "name": "针灸(门诊)",
+          "category": "中医",
+          "valid_from": "2026-10-01",
+          "valid_until": null,
+          "status": "active"
+        }
+      ],
+      "province_mappings": [
+        {
+          "id": "PM-001",
+          "national_code": "N-REHAB-001",
+          "province": "闽",
+          "mapping_type": "direct",
+          "province_codes": ["FJ-4402"],
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-002",
+          "national_code": "N-SURG-002",
+          "province": "闽",
+          "mapping_type": "one_to_many",
+          "province_codes": ["FJ-5101A", "FJ-5101B", "FJ-5101C"],
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-003",
+          "national_code": "N-LAB-003",
+          "province": "闽",
+          "mapping_type": "conditional",
+          "province_codes": ["FJ-7701", "FJ-7709"],
+          "branches": [
+            { "when": { "encounter_type": "inpatient" }, "codes": ["FJ-7701", "FJ-7709"] },
+            { "when": { "encounter_type": "outpatient" }, "codes": ["FJ-7709"] }
+          ],
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-004",
+          "national_code": "N-NURS-004",
+          "province": "闽",
+          "mapping_type": "direct",
+          "province_codes": ["FJ-6204"],
+          "mutex_group": "nursing-level",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-005",
+          "national_code": "N-NURS-005",
+          "province": "闽",
+          "mapping_type": "direct",
+          "province_codes": ["FJ-6205"],
+          "mutex_group": "nursing-level",
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-006",
+          "national_code": "N-OLD-005",
+          "province": "闽",
+          "mapping_type": "direct",
+          "province_codes": ["FJ-9001"],
+          "valid_from": "2025-01-01",
+          "valid_until": "2026-06-30",
+          "status": "revoked"
+        },
+        {
+          "id": "PM-007",
+          "national_code": "N-TRAD-006",
+          "province": "闽",
+          "mapping_type": "direct",
+          "province_codes": ["FJ-8801"],
+          "valid_from": "2026-10-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-101",
+          "national_code": "N-REHAB-001",
+          "province": "浙",
+          "mapping_type": "direct",
+          "province_codes": ["ZJ-3301"],
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        },
+        {
+          "id": "PM-103",
+          "national_code": "N-LAB-003",
+          "province": "浙",
+          "mapping_type": "conditional",
+          "province_codes": ["ZJ-8801"],
+          "branches": [
+            { "when": { "encounter_type": "inpatient" }, "codes": ["ZJ-8801", "ZJ-8802"] },
+            { "when": { "encounter_type": "outpatient" }, "codes": ["ZJ-8801"] }
+          ],
+          "valid_from": "2026-01-01",
+          "valid_until": null,
+          "status": "active"
+        }
+      ]
+    }
+  ]
 }

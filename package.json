@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "维护国家医保医疗服务项目目录与各省项目、价格和结算代码的时态映射。",
+  "description": "医保医疗服务项目跨省映射的医院适配器适配认证服务。",
   "scripts": {
     "check": "node src/service.js --check",
+    "start": "node src/service.js",
     "test": "node --test"
   }
 }
