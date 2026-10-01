@@ -12,5 +12,213 @@
       "code": "FJ-4402"
     },
     "mapping_type": "conditional"
+  },
+  "catalog": {
+    "current_version": "2026.2",
+    "national_items": {
+      "N-REHAB-001": { "name": "康复综合评定", "category": "康复", "introduced_in": "2026.1" },
+      "N-NURS-002": { "name": "分级护理", "category": "护理", "introduced_in": "2026.1" },
+      "N-ACU-010": { "name": "针刺治疗", "category": "康复", "introduced_in": "2026.1" },
+      "N-OLD-008": { "name": "旧版引流护理(已撤销)", "category": "护理", "introduced_in": "2026.1" },
+      "N-CONSULT-006": { "name": "普通门诊诊查费", "category": "诊查", "introduced_in": "2026.1" },
+      "N-CONSULT-007": { "name": "专家门诊诊查费", "category": "诊查", "introduced_in": "2026.1" }
+    },
+    "versions": {
+      "2026.1": {
+        "published_on": "2026-01-01",
+        "mappings": [
+          {
+            "id": "M01",
+            "national_code": "N-REHAB-001",
+            "province": "闽",
+            "mapping_type": "one_to_many",
+            "province_codes": ["FJ-4402", "FJ-4403"],
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "status": "active"
+          },
+          {
+            "id": "M02",
+            "national_code": "N-REHAB-001",
+            "province": "浙",
+            "mapping_type": "direct",
+            "province_codes": ["ZJ-2501"],
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "status": "active"
+          },
+          {
+            "id": "M03",
+            "national_code": "N-NURS-002",
+            "province": "闽",
+            "mapping_type": "direct",
+            "province_codes": ["FJ-5101"],
+            "valid_from": "2026-01-01",
+            "valid_to": "2026-07-01",
+            "status": "active"
+          },
+          {
+            "id": "M04",
+            "national_code": "N-NURS-002",
+            "province": "闽",
+            "mapping_type": "direct",
+            "province_codes": ["FJ-5102"],
+            "valid_from": "2026-07-01",
+            "valid_to": null,
+            "status": "active"
+          },
+          {
+            "id": "M05",
+            "national_code": "N-ACU-010",
+            "province": "闽",
+            "mapping_type": "conditional",
+            "branches": [
+              { "when": { "fact": "method", "equals": "electro" }, "province_codes": ["FJ-4611"] },
+              { "default": true, "province_codes": ["FJ-4610"] }
+            ],
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "status": "active"
+          },
+          {
+            "id": "M06",
+            "national_code": "N-OLD-008",
+            "province": "闽",
+            "mapping_type": "direct",
+            "province_codes": ["FJ-9001"],
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "status": "active"
+          },
+          {
+            "id": "M07",
+            "national_code": "N-CONSULT-006",
+            "province": "闽",
+            "mapping_type": "direct",
+            "province_codes": ["FJ-3101"],
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "status": "active"
+          },
+          {
+            "id": "M08",
+            "national_code": "N-CONSULT-007",
+            "province": "闽",
+            "mapping_type": "direct",
+            "province_codes": ["FJ-3102"],
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "status": "active"
+          }
+        ],
+        "mutex_groups": [
+          {
+            "id": "G-CONSULT",
+            "members": ["N-CONSULT-006", "N-CONSULT-007"],
+            "reason": "同次就诊普通门诊与专家门诊诊查费互斥"
+          }
+        ]
+      },
+      "2026.2": {
+        "published_on": "2026-07-01",
+        "mappings": [
+          {
+            "id": "M01",
+            "national_code": "N-REHAB-001",
+            "province": "闽",
+            "mapping_type": "one_to_many",
+            "province_codes": ["FJ-4402", "FJ-4404"],
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "status": "active",
+            "revised_in": "2026.2",
+            "revision_note": "组合第二项由 FJ-4403 调整为 FJ-4404"
+          },
+          {
+            "id": "M02",
+            "national_code": "N-REHAB-001",
+            "province": "浙",
+            "mapping_type": "direct",
+            "province_codes": ["ZJ-2501"],
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "status": "active"
+          },
+          {
+            "id": "M03",
+            "national_code": "N-NURS-002",
+            "province": "闽",
+            "mapping_type": "direct",
+            "province_codes": ["FJ-5101"],
+            "valid_from": "2026-01-01",
+            "valid_to": "2026-07-01",
+            "status": "active"
+          },
+          {
+            "id": "M04",
+            "national_code": "N-NURS-002",
+            "province": "闽",
+            "mapping_type": "direct",
+            "province_codes": ["FJ-5102"],
+            "valid_from": "2026-07-01",
+            "valid_to": null,
+            "status": "active"
+          },
+          {
+            "id": "M05",
+            "national_code": "N-ACU-010",
+            "province": "闽",
+            "mapping_type": "conditional",
+            "branches": [
+              { "when": { "fact": "method", "equals": "electro" }, "province_codes": ["FJ-4611"] },
+              { "default": true, "province_codes": ["FJ-4610"] }
+            ],
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "status": "active"
+          },
+          {
+            "id": "M06",
+            "national_code": "N-OLD-008",
+            "province": "闽",
+            "mapping_type": "direct",
+            "province_codes": ["FJ-9001"],
+            "valid_from": "2026-01-01",
+            "valid_to": "2026-07-01",
+            "status": "withdrawn",
+            "revised_in": "2026.2",
+            "withdrawn_on": "2026-07-01",
+            "revision_note": "项目撤销，2026-07-01 起不得结算；历史就诊按原规则"
+          },
+          {
+            "id": "M07",
+            "national_code": "N-CONSULT-006",
+            "province": "闽",
+            "mapping_type": "direct",
+            "province_codes": ["FJ-3101"],
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "status": "active"
+          },
+          {
+            "id": "M08",
+            "national_code": "N-CONSULT-007",
+            "province": "闽",
+            "mapping_type": "direct",
+            "province_codes": ["FJ-3102"],
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "status": "active"
+          }
+        ],
+        "mutex_groups": [
+          {
+            "id": "G-CONSULT",
+            "members": ["N-CONSULT-006", "N-CONSULT-007"],
+            "reason": "同次就诊普通门诊与专家门诊诊查费互斥"
+          }
+        ]
+      }
+    }
   }
 }

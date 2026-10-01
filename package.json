@@ -6,6 +6,8 @@
   "description": "维护国家医保医疗服务项目目录与各省项目、价格和结算代码的时态映射。",
   "scripts": {
     "check": "node src/service.js --check",
+    "start": "node src/service.js",
+    "bootstrap": "node src/service.js --bootstrap",
     "test": "node --test"
   }
 }
